@@ -1,0 +1,186 @@
+*{
+	margin:0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body{
+    font-size: 16px;
+}
+
+.bg-gradient{
+    background-image: linear-gradient(to bottom, #000000, #080808, #0e0e0e, #141414, #181818, #1c1c1c, #212121, #252525, #2a2a2a, #2f2f2f, #343434, #393939);
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+h4{
+    color: #C7C7C7;
+}
+
+h5{
+    color: #C7C7C7;
+}
+p{
+    color: #C7C7C7;
+}
+
+header{
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .logo{
+        height: 100%;
+        width: 6.5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #3F3E3E;
+        i{
+            color: #CAC6C6;
+            font-size: 24px;
+        }
+    }
+    ul{
+        height: 100%;
+        width: 73.5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        li{
+            margin-right: 2.5rem;
+            a{
+                color: #C7C7C7;
+            }
+        }
+    }
+    .name{
+        height: 100%;
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color:#C7C7C7;
+    }
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3.125rem;
+    .card-box{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        div{
+            width: 50%;
+            height: 14rem;
+            .items{
+                float: left;
+                h3{
+                    font-size: 50px;
+                    font-weight: 600;
+                    color: #C7C7C7;
+                }
+            }
+            .description{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                .rect-1{
+                    width: 100%;
+                    height: 15%;
+                    div{
+                        height: 100%;
+                        width: 100%;
+                        h4{
+                            float: right;
+                            text-align: center;
+                            border: 2px solid #C7C7C7;
+                            width: 6.25rem;
+                            letter-spacing: 9px;
+                        }
+                    }
+                }
+                .rect-2{
+                    width: 100%;
+                    height: 50%;
+                    div{
+                        height: 92%;
+                        width: 100%;
+                        h4{ 
+                            font-size: 18px;
+                            width: 20px;
+                            height: 100%;
+                            border: 2px solid #C7C7C7;
+                            word-wrap: break-word;
+                            text-align: center;
+                            line-height: 18px;
+                        }
+                    }
+                }
+                .card-item{
+                    width: 100%;
+                    height: 85%;
+                    .item-1{
+                        padding: 0.75rem 0;
+                        height: 100%;
+                        float: right;
+                        width: 70%;
+                        h4{
+                            text-align: right;
+                        }
+                        p{
+                            padding-top: 0.3125rem;
+                            text-align: right;
+                        }
+                    }
+                }
+                .card-item-2{
+                    width: 100%;
+                    height: 50%;
+                    .item-2{
+                        padding: 0.75rem 0;
+                        float: left;
+                        height: 100%;
+                        width: 70%;
+                        h4{
+                            text-align: left;
+                        }
+                        p{
+                            padding-top: 0.3125rem;
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+            .difficult{
+                position: relative;
+                width: 100%;
+                height: 100%;
+                .content-difficult{
+                    text-align: right;
+                    height: 6rem;
+                    position: absolute;
+                    top: 100%;
+                    left: 100%;
+                    transform: translate(-100%, -100%);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+}
+
+.bg-gradient {
+  background-image: linear-gradient(to bottom, #000000, #080808, #0e0e0e, #141414, #181818, #1c1c1c, #212121, #252525, #2a2a2a, #2f2f2f, #343434, #393939);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h4 {
+  color: #C7C7C7;
+}
+
+h5 {
+  color: #C7C7C7;
+}
+
+p {
+  color: #C7C7C7;
+}
+
+header {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .logo {
+  height: 100%;
+  width: 6.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #3F3E3E;
+}
+header .logo i {
+  color: #CAC6C6;
+  font-size: 24px;
+}
+header ul {
+  height: 100%;
+  width: 73.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header ul li {
+  margin-right: 2.5rem;
+}
+header ul li a {
+  color: #C7C7C7;
+}
+header .name {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #C7C7C7;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3.125rem;
+}
+main .card-box {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+main .card-box div {
+  width: 50%;
+  height: 14rem;
+}
+main .card-box div .items {
+  float: left;
+}
+main .card-box div .items h3 {
+  font-size: 50px;
+  font-weight: 600;
+  color: #C7C7C7;
+}
+main .card-box div .description {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+main .card-box div .description .rect-1 {
+  width: 100%;
+  height: 15%;
+}
+main .card-box div .description .rect-1 div {
+  height: 100%;
+  width: 100%;
+}
+main .card-box div .description .rect-1 div h4 {
+  float: right;
+  text-align: center;
+  border: 2px solid #C7C7C7;
+  width: 6.25rem;
+  letter-spacing: 9px;
+}
+main .card-box div .description .rect-2 {
+  width: 100%;
+  height: 50%;
+}
+main .card-box div .description .rect-2 div {
+  height: 92%;
+  width: 100%;
+}
+main .card-box div .description .rect-2 div h4 {
+  font-size: 18px;
+  width: 20px;
+  height: 100%;
+  border: 2px solid #C7C7C7;
+  word-wrap: break-word;
+  text-align: center;
+  line-height: 18px;
+}
+main .card-box div .description .card-item {
+  width: 100%;
+  height: 85%;
+}
+main .card-box div .description .card-item .item-1 {
+  padding: 0.75rem 0;
+  height: 100%;
+  float: right;
+  width: 70%;
+}
+main .card-box div .description .card-item .item-1 h4 {
+  text-align: right;
+}
+main .card-box div .description .card-item .item-1 p {
+  padding-top: 0.3125rem;
+  text-align: right;
+}
+main .card-box div .description .card-item-2 {
+  width: 100%;
+  height: 50%;
+}
+main .card-box div .description .card-item-2 .item-2 {
+  padding: 0.75rem 0;
+  float: left;
+  height: 100%;
+  width: 70%;
+}
+main .card-box div .description .card-item-2 .item-2 h4 {
+  text-align: left;
+}
+main .card-box div .description .card-item-2 .item-2 p {
+  padding-top: 0.3125rem;
+  text-align: left;
+}
+main .card-box div .difficult {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+main .card-box div .difficult .content-difficult {
+  text-align: right;
+  height: 6rem;
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  transform: translate(-100%, -100%);
+}
+
+/*# sourceMappingURL=estilos.css.map */
