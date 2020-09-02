@@ -11,7 +11,8 @@ body{
 }
 
 .bg-gradient{
-    background-image: linear-gradient(to bottom, #000000, #080808, #0e0e0e, #141414, #181818, #1c1c1c, #212121, #252525, #2a2a2a, #2f2f2f, #343434, #393939);
+    position: relative;
+    background-image: radial-gradient(circle, #480808, #3f0b0a, #350c0c, #2c0d0c, #230d0c, #1e0b0c, #190a0b, #120809, #0e0607, #0a0405, #050203, #000000);
 }
 
 li{
@@ -23,14 +24,14 @@ a{
 }
 
 h4{
-    color: #C7C7C7;
+    color: white;
 }
 
 h5{
-    color: #C7C7C7;
+    color: white;
 }
 p{
-    color: #C7C7C7;
+    color: white;
 }
 
 header{
@@ -38,15 +39,19 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    position: fixed;
+    background-image: linear-gradient(to right, #000000, #0c0406, #14090b, #1b0d0e, #201011, #251112, #2b1212, #301212, #361010, #3c0e0e, #420c0c, #480808);
+    width: 100%;
+    z-index: 10;
     .logo{
         height: 100%;
         width: 6.5%;
         display: flex;
         justify-content: center;
         align-items: center;
-        background: #3F3E3E;
+        background-image: linear-gradient(to right, #510303, #460707, #3c0a0a, #310c0c, #260d0c, #200c0c, #1a0a0b, #120809, #0e0607, #0a0405, #050203, #000000);
         i{
-            color: #CAC6C6;
+            color: white;
             font-size: 24px;
         }
     }
@@ -77,7 +82,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 3.125rem;
+    padding: 8rem 3.125rem 5rem 3.125rem;
     .card-box{
         width: 80%;
         display: flex;
@@ -182,5 +187,116 @@ main{
                 }
             }
         }
+    }
+}
+
+.imagen-background{
+    position: absolute;
+    height: 350px;
+    width: 350px;
+    img{
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+    }
+    
+}
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    flex-wrap: wrap;
+    .history{
+        width: 30%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        .box-figure{
+            background-image: linear-gradient(to right, #000000, #0c0406, #14090b, #1b0d0e, #201011, #251112, #2b1212, #301212, #361010, #3c0e0e, #420c0c, #480808);
+            border-radius: 50%;
+            height: 800px;
+            width: 800px;
+            position: absolute;
+            top: -100%;
+            transform: translate(-50%,-50%);
+        }
+        h3{
+            font-size: 24px;
+            color: white;
+            position: absolute;
+            top: 40%;
+            left: 10%;
+            transform: translateY(-40%);
+        }
+    }
+    .card-me{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 3.125 rem;
+        p{
+            text-align: center;
+        }
+    }
+    .others{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+        h3{
+            color: white;
+        }
+    }
+}
+.about-my-work{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    .my-work{
+        width: 100%;
+        .flex-box-1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .img-work{
+                height: 352px;
+                width: 324px;
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+            .img-work.a1{
+                // position: absolute;
+            }
+            .img-work.a3{
+                // position: absolute;
+            }
+
+        }
+        .flex-box-2{
+            .img-work.a2{
+            }
+
+        }
+    }
+    
+}
+.collections{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    div{
+        img{
+            height: 352px;
+            width: 324px;
+        }   
     }
 }
