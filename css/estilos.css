@@ -125,6 +125,7 @@ header .name h3 {
   color: white;
   font-size: 24px;
   border-radius: 1.25rem;
+  cursor: pointer;
 }
 .home .card .card-description button:focus {
   outline: none;
@@ -246,7 +247,7 @@ header .name h3 {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: fade(black, 30%);
+  background: rgba(0, 0, 0, 0.3);
   top: 0;
   z-index: 1;
 }
@@ -261,8 +262,7 @@ header .name h3 {
   margin: 0 auto;
 }
 .contacto .datos .container .blurb {
-  background-image: linear-gradient(to right, #000000, #180308, #26050c, #32050d, #40000c);
-  border: 6px double grey;
+  background-image: linear-gradient(to right bottom, #cd0101, #9d0813, #6d1017, #3e1214, #0f0707);
   padding: 2.25rem;
   text-align: center;
   width: 25%;
@@ -281,7 +281,7 @@ header .name h3 {
 .contacto .formulario {
   position: relative;
   z-index: 3;
-  background-image: linear-gradient(to right, #000000, #180308, #26050c, #32050d, #40000c);
+  background-image: linear-gradient(to right bottom, #cd0101, #9d0813, #6d1017, #3e1214, #0f0707);
   max-width: 40.625rem;
   margin: 0 auto;
   padding: 2.25rem;
@@ -292,9 +292,7 @@ header .name h3 {
   position: relative;
   margin-bottom: 2rem;
 }
-.contacto .formulario .formulario_contacto .input-group input[type=text],
-.contacto .formulario .formulario_contacto .input-group input[type=email],
-.contacto .formulario .formulario_contacto .input-group textarea {
+.contacto .formulario .formulario_contacto .input-group input[type=text], .contacto .formulario .formulario_contacto .input-group input[type=email], .contacto .formulario .formulario_contacto .input-group textarea {
   font-size: 1rem;
   color: black;
   width: 100%;
@@ -302,13 +300,11 @@ header .name h3 {
   padding: 0.9375rem 0;
   background: none;
   border: none;
-  border-bottom: 2px solid fade(gold, 50%);
+  border-bottom: 2px solid rgba(41, 4, 4, 0.5);
   vertical-align: top;
 }
-.contacto .formulario .formulario_contacto .input-group input[type=text]:focus,
-.contacto .formulario .formulario_contacto .input-group input[type=email]:focus,
-.contacto .formulario .formulario_contacto .input-group textarea:focus {
-  border-bottom: 2px solid gold;
+.contacto .formulario .formulario_contacto .input-group input[type=text]:focus, .contacto .formulario .formulario_contacto .input-group input[type=email]:focus, .contacto .formulario .formulario_contacto .input-group textarea:focus {
+  border-bottom: 2px solid #290404;
 }
 .contacto .formulario .formulario_contacto .input-group textarea {
   max-width: 100%;
@@ -317,7 +313,8 @@ header .name h3 {
   min-width: 100%;
 }
 .contacto .formulario .formulario_contacto .input-group label {
-  color: white;
+  color: #c5c0c0;
+  font-family: "Lato", sans-serif;
 }
 .contacto .formulario .formulario_contacto .input-group label.label {
   position: absolute;
@@ -340,14 +337,14 @@ header .name h3 {
 .contacto .formulario .formulario_contacto .input-group .error {
   position: absolute;
   color: #ff3b3b;
+  font-family: "Lato", sans-serif;
   font-size: 0.875rem;
 }
 .contacto .formulario .formulario_contacto input[type=submit] {
-  background: gold;
+  background-image: linear-gradient(to right, #000000, #180308, #26050c, #32050d, #40000c);
   color: white;
-  border-radius: 1px;
-  border: 2px solid white;
   cursor: pointer;
+  border: none;
   display: block;
   margin: 0 auto;
   margin-top: 3.125rem;
@@ -357,9 +354,11 @@ header .name h3 {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
 }
 .contacto .formulario .formulario_contacto input[type=submit]:hover {
-  background: #ccac00;
+  background-image: linear-gradient(to right bottom, #cd0101, #9d0813, #6d1017, #3e1214, #0f0707);
 }
 
 footer {
@@ -370,6 +369,10 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+footer h3 {
+  font-style: normal;
+  font-weight: 400;
 }
 
 /*# sourceMappingURL=estilos.css.map */

@@ -124,6 +124,7 @@ header{
                 color: white;
                 font-size: 24px;
                 border-radius: 1.25rem;
+                cursor: pointer;
             }
             button:focus{
                 outline: none;
@@ -255,7 +256,7 @@ header{
             position: absolute;
             width: 100%;
             height: 100%;
-            background: fade(black, 30%);
+            background: rgba(black, 30%);
             top: 0;
             z-index: 1;
         }
@@ -271,8 +272,7 @@ header{
             margin: 0 auto;
 
             .blurb{
-                background-image: linear-gradient(to right, #000000, #180308, #26050c, #32050d, #40000c);
-                border: 6px double grey;
+                background-image: linear-gradient(to right bottom, #cd0101, #9d0813, #6d1017, #3e1214, #0f0707);
                 padding: 2.25rem;
                 text-align: center;
                 width: 25%;
@@ -296,7 +296,7 @@ header{
     .formulario{
         position: relative;
         z-index: 3;
-        background-image: linear-gradient(to right, #000000, #180308, #26050c, #32050d, #40000c);
+        background-image: linear-gradient(to right bottom, #cd0101, #9d0813, #6d1017, #3e1214, #0f0707);
         max-width: 40.625rem;
         margin: 0 auto;
         padding: 2.25rem;
@@ -308,9 +308,7 @@ header{
                 position: relative;
                 margin-bottom: 2rem;
 
-                input[type="text"],
-                input[type="email"],
-                textarea{
+                input[type="text"],input[type="email"],textarea{
                     // font-family: @fuente-secundaria;
                     font-size: 1rem;
                     color: black;
@@ -319,11 +317,11 @@ header{
                     padding: 0.9375rem 0;
                     background: none;
                     border: none;
-                    border-bottom: 2px solid fade(gold, 50%);
+                    border-bottom: 2px solid rgba(41, 4, 4, 0.5);
                     vertical-align: top;
 
                     &:focus{
-                        border-bottom: 2px solid gold;
+                        border-bottom: 2px solid rgba(41, 4, 4);
                     }
                 }
 
@@ -335,8 +333,8 @@ header{
                 }
 
                 label{
-                    color: white;
-                    // font-family: @fuente-secundaria;
+                    color: rgb(197, 192, 192);
+                    font-family: 'Lato', sans-serif;
 
                     &.label{
                         position: absolute;
@@ -362,18 +360,17 @@ header{
                 .error{
                     position: absolute;
                     color: rgb(255,59,59);
-                    // font-family: @fuente-secundaria;
+                    font-family: 'Lato', sans-serif;
                     font-size: 0.875rem;
                 }
             }
 
             input[type="submit"]{
                 // font-family: @fuente-secundaria;
-                background: gold;
+                background-image: linear-gradient(to right, #000000, #180308, #26050c, #32050d, #40000c);
                 color: white;
-                border-radius: 1px;
-                border: 2px solid white;
                 cursor: pointer;
+                border: none;
                 display: block;
                 margin: 0 auto;
                 margin-top: 3.125rem;
@@ -383,9 +380,10 @@ header{
                 -webkit-transition: all .3s ease;
                 -o-transition: all .3s ease;
                 transition: all .3s ease;
-
+                font-family: 'Lato', sans-serif;
+                font-weight: 400;
                 &:hover{
-                    background: darken(gold, 10%);
+                    background-image: linear-gradient(to right bottom, #cd0101, #9d0813, #6d1017, #3e1214, #0f0707);
                 }
             }
         }
@@ -402,4 +400,8 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    h3{
+        font-style: normal;
+        font-weight: 400;
+    }
 }
