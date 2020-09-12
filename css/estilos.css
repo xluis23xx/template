@@ -42,6 +42,29 @@ p {
   color: white;
 }
 
+.video-modal {
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+.video-modal + i {
+  position: absolute;
+  top: 17%;
+  right: 25%;
+  color: #c44343;
+  font-size: 2.25rem;
+  display: inline-block;
+  padding: 0.65rem 0.775rem;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.video-modal + i:hover {
+  color: #f06c6c;
+}
+
 header {
   height: 5rem;
   display: flex;
@@ -142,11 +165,12 @@ header .name h3:hover {
   border-radius: 1.25rem;
   cursor: pointer;
 }
+.home .card .card-description button:hover {
+  background-image: linear-gradient(to left top, #e77015, #eb6017, #ee4d1d, #f03424, #f2002c);
+  color: rgba(255, 255, 255, 0.8);
+}
 .home .card .card-description button:focus {
   outline: none;
-}
-.home .card .card-description button:hover {
-  background-image: linear-gradient(to right bottom, #e00000, #ce1112, #bb1c1c, #a82323, #942828);
 }
 .home .card .my-image {
   width: 30%;
@@ -219,38 +243,60 @@ header .name h3:hover {
   margin-right: 0;
 }
 
-.collections {
+.collections .container {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
-  position: relative;
-  height: 352px;
-  margin-left: 10.5rem;
-  margin-right: 10.5rem;
-  margin-bottom: 3rem;
+  max-width: 1080px;
+  margin: 0 auto;
 }
-.collections .imagenes {
-  height: 100%;
-  width: 60%;
+.collections .container .col {
+  width: 50%;
 }
-.collections .imagenes img {
-  height: 100%;
+.collections .container .col.izq {
+  box-shadow: 0px 9px 32px -1px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.collections .container .col .title-collections {
+  padding: 3.125rem;
+  padding-right: 0;
+}
+.collections .container .col .title-collections h2 {
+  color: white;
+}
+.collections .container .col .title-collections p {
+  color: fade(white, 70%);
+  padding-bottom: 1.125rem;
+  font-size: 1.125rem;
+  line-height: 1.75;
+}
+.collections .container .col .title-collections p:last-child {
+  padding-bottom: 0;
+}
+.collections .container .col .slider {
+  width: 300%;
+  display: flex;
+}
+.collections .container .col .slider .slide {
   width: 100%;
-  object-fit: cover;
-  object-position: center;
+  min-height: 400px;
+  background-size: cover;
+  background-position: center;
 }
-.collections .card-collections {
-  width: 40%;
-  height: 100%;
-  margin: 0 3rem 0 3rem;
+.collections .container .col .slider .slide.img1 {
+  background-image: url("../img/vestido-fashion.jpg");
 }
-.collections .card-collections h3 {
-  text-align: center;
+.collections .container .col .slider .slide.img2 {
+  background-image: url("../img/vestido-grey.jpg");
 }
-.collections .card-collections p {
-  margin-top: 1rem;
+.collections .container .col .slider .slide.img3 {
+  background-image: url("../img/vestido-beach.jpg");
 }
 
+.contacto {
+  margin: 5rem 0;
+}
 .contacto .datos {
   padding: 5.625rem 0 11.875rem 0;
   position: relative;
