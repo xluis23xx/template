@@ -65,7 +65,7 @@ p {
   color: #f06c6c;
 }
 
-header {
+.header-pc {
   height: 5rem;
   display: flex;
   align-items: center;
@@ -75,39 +75,28 @@ header {
   width: 100%;
   z-index: 10;
 }
-header .logo {
+.header-pc ul {
   height: 100%;
-  width: 6.5%;
+  width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-header .logo i {
-  color: white;
-  font-size: 24px;
-}
-header ul {
-  height: 100%;
-  width: 73.5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-header ul li {
+.header-pc ul li {
   margin-right: 2.5rem;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
 }
-header ul li a {
+.header-pc ul li a {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-header ul li a:hover {
+.header-pc ul li a:hover {
   color: rgba(255, 255, 255, 0.5);
 }
-header .name {
+.header-pc .name {
   height: 100%;
   width: 20%;
   display: flex;
@@ -116,14 +105,84 @@ header .name {
   color: white;
   cursor: pointer;
 }
-header .name h3 {
+.header-pc .name h3 {
   font-style: normal;
   font-weight: 700;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-header .name h3:hover {
+.header-pc .name h3:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.header-movil {
+  height: 5rem;
+  display: none;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  background-image: linear-gradient(to right top, #000000, #180308, #26050c, #32050d, #40000c);
+  width: 100%;
+  z-index: 10;
+}
+.header-movil .burger-menu {
+  padding-left: 1rem;
+  cursor: pointer;
+  font-size: 2.1875rem;
+}
+.header-movil .slideMenu {
+  position: fixed;
+  top: 5rem;
+  left: -80%;
+  text-align: center;
+  width: 80%;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.header-movil .slideMenu.active {
+  left: 0;
+}
+.header-movil .slideMenu ul {
+  background: #33040f;
+  height: 100%;
+  width: 80%;
+}
+.header-movil .slideMenu ul li {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  display: block;
+  padding: 0.625rem 0;
+  border-top: 1px solid #32050d;
+}
+.header-movil .slideMenu ul li a {
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.header-movil .slideMenu ul li a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+.header-movil .name {
+  padding-right: 1rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+}
+.header-movil .name h3 {
+  font-style: normal;
+  font-weight: 700;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.header-movil .name h3:hover {
   color: rgba(255, 255, 255, 0.5);
 }
 
@@ -197,7 +256,7 @@ header .name h3:hover {
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
-  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 .about-my-work .about .card-me {
   width: 40%;
@@ -235,8 +294,8 @@ header .name h3:hover {
   width: 100%;
   object-fit: cover;
   object-position: center;
-  position: relative;
-  border-radius: 50%;
+  border-top-right-radius: 10%;
+  border-bottom-left-radius: 10%;
   margin-right: 5rem;
 }
 .about-my-work .my-work img:last-child {
@@ -302,7 +361,7 @@ header .name h3:hover {
   position: relative;
   background-image: url("../img/modas.png");
   background-size: cover;
-  background-position: center;
+  background-repeat: no-repeat;
 }
 .contacto .datos .overlay {
   position: absolute;
@@ -431,9 +490,99 @@ footer {
   justify-content: center;
   align-items: center;
 }
-footer h3 {
+footer .container-footer p {
   font-style: normal;
   font-weight: 400;
+}
+footer .container-footer .top-redes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media all and (max-width: 1200px) {
+  .about-my-work .my-work {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-my-work .my-work .img-2 {
+    display: none;
+  }
+  .about-my-work .about {
+    display: block;
+  }
+  .about-my-work .about .card-me {
+    width: 100%;
+  }
+  .about-my-work .about .others {
+    width: 100%;
+  }
+
+  .collections .container {
+    display: block;
+    width: 540px;
+  }
+  .collections .container .col {
+    width: 100%;
+  }
+  .collections .container .col .title-collections {
+    padding: 1rem;
+    text-align: justify;
+  }
+  .collections .container .col .title-collections h2 {
+    text-align: center;
+  }
+}
+@media all and (max-width: 980px) {
+  .contacto .datos .container .blurb {
+    width: 100%;
+    max-width: 40.625rem;
+    margin: 0 auto;
+    margin-bottom: 2.25rem;
+  }
+  .contacto .datos .container .blurb:last-child {
+    margin-bottom: 0;
+  }
+}
+@media all and (max-width: 850px) {
+  .my-work .img-1 {
+    display: none;
+  }
+}
+@media all and (max-width: 800px) {
+  .home .card {
+    display: block;
+  }
+  .home .card .card-description {
+    width: 100%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .home .card .my-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+  }
+  .home .card .my-image img {
+    width: 30%;
+  }
+}
+@media all and (max-width: 660px) {
+  .header-pc {
+    display: none;
+  }
+
+  .header-movil {
+    display: flex;
+  }
+
+  .col.izq {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=estilos.css.map */

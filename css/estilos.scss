@@ -63,7 +63,7 @@ p{
     }
 }
 
-header{
+.header-pc{
     height: 5rem;
     display: flex;
     align-items: center;
@@ -73,22 +73,9 @@ header{
     background-image: linear-gradient(to right top, #000000, #180308, #26050c, #32050d, #40000c);
     width: 100%;
     z-index: 10;
-    .logo{
-        height: 100%;
-        width: 6.5%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        // background-image: linear-gradient(to right, #510303, #460707, #3c0a0a, #310c0c, #260d0c, #200c0c, #1a0a0b, #120809, #0e0607, #0a0405, #050203, #000000);
-        // background-image: linear-gradient(to right top, #000000, #180308, #26050c, #32050d, #40000c);
-        i{
-            color: white;
-            font-size: 24px;
-        }
-    }
     ul{
         height: 100%;
-        width: 73.5%;
+        width: 80%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -111,6 +98,78 @@ header{
     .name{
         height: 100%;
         width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color:white;
+        cursor: pointer;
+        h3{
+            font-style: normal;
+            font-weight: 700;
+            -webkit-transition: all .3s ease;
+            -o-transition: all .3s ease;
+            transition: all .3s ease;
+            &:hover{
+                color: rgba(white,0.5);
+            }
+        }
+    }
+}
+
+.header-movil{
+    height: 5rem;
+    display: none;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    // background-image: linear-gradient(to right, #000000, #0c0406, #14090b, #1b0d0e, #201011, #251112, #2b1212, #301212, #361010, #3c0e0e, #420c0c, #480808);
+    background-image: linear-gradient(to right top, #000000, #180308, #26050c, #32050d, #40000c);
+    width: 100%;
+    z-index: 10;
+    .burger-menu{
+        padding-left: 1rem;
+        cursor: pointer;
+        font-size: 2.1875rem;
+    }
+    .slideMenu{
+        position: fixed;
+        top: 5rem;
+        left: -80%;
+        text-align: center;
+        width: 80%;
+        -webkit-transition: all .5s ease;
+        -o-transition: all .5s ease;
+        transition: all .5s ease;
+        &.active{
+            left: 0;
+        }
+        ul{
+            background:#33040f;
+            height: 100%;
+            width: 80%;
+            li{
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                display: block;
+                padding: 0.625rem 0;
+                border-top: 1px solid #32050d;
+                a{
+                    -webkit-transition: all .3s ease;
+                    -o-transition: all .3s ease;
+                    transition: all .3s ease;
+    
+                    &:hover{
+                        color: rgba(white,0.5);
+                    }
+                }
+            }
+        }
+    }
+    .name{
+        padding-right: 1rem;
+        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -167,7 +226,7 @@ header{
 
                 &:hover{
                     background-image: linear-gradient(to left top, #e77015, #eb6017, #ee4d1d, #f03424, #f2002c);    
-                    color: rgba(white, 0.8)
+                    color: rgba(white, 0.8);
                 }
             }
             button:focus{
@@ -202,7 +261,7 @@ header{
         align-items: center;
         flex-wrap: wrap;
         width: 100%;
-        margin-bottom: 2rem;
+        margin-top: 2rem;
         .card-me{
             width: 40%;
             display: flex;
@@ -239,8 +298,8 @@ header{
                 width: 100%;
                 object-fit: cover;
                 object-position: center;
-                position: relative;
-                border-radius: 50%;
+                border-top-right-radius: 10%;
+                border-bottom-left-radius: 10%;
                 margin-right: 5rem;
             }
             img:last-child{
@@ -323,7 +382,7 @@ header{
         position: relative;
         background-image: url('../img/modas.png');
         background-size: cover;
-        background-position: center;
+        background-repeat: no-repeat;
 
         .overlay{
             position: absolute;
@@ -473,8 +532,117 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    h3{
-        font-style: normal;
-        font-weight: 400;
+    .container-footer{
+        p{
+            font-style: normal;
+            font-weight: 400;
+        }
+        .top-redes{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
+}
+
+// Media Queries para responsive
+
+@media all and(max-width: 1200px){
+    .about-my-work{
+        .my-work{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .img-2{
+                display: none;
+            }
+        }
+        .about{
+            display: block;
+            .card-me{
+                width: 100%;
+            }
+            .others{
+                width: 100%;
+            }
+        }
+    }
+    .collections{
+        .container{
+            display: block;
+            width: 540px;
+            .col{
+                width: 100%;
+                .title-collections{
+                    padding: 1rem;
+                    text-align: justify;
+                    h2{
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and(max-width: 980px){
+    .contacto .datos .container .blurb{
+        width: 100%;
+        max-width: 40.625rem;
+        margin: 0 auto;
+        margin-bottom: 2.25rem;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media all and(max-width: 850px){
+    .my-work{
+        .img-1{
+            display: none;
+        }
+    }
+}
+
+@media all and(max-width: 800px){
+    .home .card{
+        // text-align: center;
+        display: block;
+        .card-description{
+            width: 100%;
+            position: relative;
+            left: 50%;
+            transform:translateX(-50%);
+        }
+        .my-image{
+            width: 100%;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 1rem;
+            img{
+                width: 30%;
+            }
+        }
+    }
+}
+
+@media all and(max-width: 660px){
+    .header-pc{
+        display: none;
+    }
+    .header-movil{
+        display: flex;
+    }
+    .col.izq{
+        display: none;
+    }
+}
+
+@media all and(max-width: 560px){
+    // .col.izq{
+    //     display: none;
+    // }
 }
