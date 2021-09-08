@@ -11,11 +11,6 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-.bg-gradient {
-  position: relative;
-  background-image: linear-gradient(to right, #000000, #180308, #26050c, #32050d, #40000c);
-}
-
 li {
   list-style: none;
 }
@@ -40,6 +35,10 @@ h5 {
 
 p {
   color: white;
+}
+
+button:focus {
+  outline: none;
 }
 
 .video-modal {
@@ -71,7 +70,8 @@ p {
   align-items: center;
   justify-content: center;
   position: fixed;
-  background-image: linear-gradient(to right top, #000000, #180308, #26050c, #32050d, #40000c);
+  top: 0;
+  background-image: linear-gradient(to right bottom, #4e0000, #520000, #560000, #5a0000, #5e0000);
   width: 100%;
   z-index: 10;
 }
@@ -86,7 +86,7 @@ p {
   margin-right: 2.5rem;
   font-size: 18px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
 }
 .header-pc ul li a {
   -webkit-transition: all 0.3s ease;
@@ -123,7 +123,7 @@ p {
   flex-direction: row;
   justify-content: space-between;
   position: fixed;
-  background-image: linear-gradient(to right top, #000000, #180308, #26050c, #32050d, #40000c);
+  background-image: linear-gradient(to right bottom, #4e0000, #520000, #560000, #5a0000, #5e0000);
   width: 100%;
   z-index: 10;
 }
@@ -146,14 +146,14 @@ p {
   left: 0;
 }
 .header-movil .slideMenu ul {
-  background: #33040f;
+  background-image: radial-gradient(circle, #211f1f, #1c1b1b, #181717, #131212, #0d0c0c);
   height: 100%;
   width: 80%;
 }
 .header-movil .slideMenu ul li {
   font-size: 18px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   display: block;
   padding: 0.625rem 0;
   border-top: 1px solid #32050d;
@@ -186,35 +186,41 @@ p {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.home {
+.main {
+  background-image: radial-gradient(circle, #211f1f, #1c1b1b, #181717, #131212, #0d0c0c);
+  width: 100%;
+}
+.main .home {
+  width: 100%;
+  max-height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 8rem 3.125rem 0rem 3.125rem;
 }
-.home .card {
+.main .home .card {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.home .card .card-description {
+.main .home .card .card-description {
   width: 40%;
 }
-.home .card .card-description h4 {
+.main .home .card .card-description h4 {
   margin-bottom: 1.25rem;
 }
-.home .card .card-description h3 {
+.main .home .card .card-description h3 {
   margin-bottom: 1.25rem;
 }
-.home .card .card-description h3 span {
+.main .home .card .card-description h3 span {
   font-size: 40px;
 }
-.home .card .card-description p {
+.main .home .card .card-description p {
   margin-bottom: 1.25rem;
 }
-.home .card .card-description button {
+.main .home .card .card-description button {
   background-image: linear-gradient(to left top, #e00000, #c70011, #ad0018, #92021b, #78091c);
   border: none;
   height: 2.5rem;
@@ -224,25 +230,27 @@ p {
   border-radius: 1.25rem;
   cursor: pointer;
 }
-.home .card .card-description button:hover {
-  background-image: linear-gradient(to left top, #e77015, #eb6017, #ee4d1d, #f03424, #f2002c);
+.main .home .card .card-description button:hover {
+  background-image: linear-gradient(to right bottom, #5e2a32, #7a2733, #962031, #b1152b, #cb0021);
   color: rgba(255, 255, 255, 0.8);
 }
-.home .card .card-description button:focus {
+.main .home .card .card-description button:focus {
   outline: none;
 }
-.home .card .my-image {
+.main .home .card .my-image {
   width: 30%;
   height: 100%;
 }
-.home .card .my-image img {
+.main .home .card .my-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
-
-.about-my-work {
+.main .home .card .movil {
+  display: none;
+}
+.main .about-my-work {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -250,7 +258,7 @@ p {
   margin: 5rem 0;
   flex-wrap: wrap;
 }
-.about-my-work .about {
+.main .about-my-work .about {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -258,51 +266,46 @@ p {
   width: 100%;
   margin-top: 2rem;
 }
-.about-my-work .about .card-me {
+.main .about-my-work .about .card-me {
   width: 40%;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 3.125 rem;
 }
-.about-my-work .about .card-me p {
+.main .about-my-work .about .card-me p {
   text-align: center;
   font-style: normal;
   font-size: 20px;
 }
-.about-my-work .about .others {
+.main .about-my-work .about .others {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 20%;
 }
-.about-my-work .about .others h3 {
+.main .about-my-work .about .others h3 {
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
 }
-.about-my-work .my-work {
+.main .about-my-work .my-work {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 352px;
-  width: 324px;
 }
-.about-my-work .my-work img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
+.main .about-my-work .my-work img {
+  height: 280px;
+  width: 320px;
+  margin-right: 3rem;
   border-top-right-radius: 10%;
   border-bottom-left-radius: 10%;
-  margin-right: 5rem;
 }
-.about-my-work .my-work img:last-child {
+.main .about-my-work .my-work img:last-child {
   margin-right: 0;
 }
-
-.collections .container {
+.main .collections .container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -310,60 +313,61 @@ p {
   max-width: 1080px;
   margin: 0 auto;
 }
-.collections .container .col {
+.main .collections .container .col {
   width: 50%;
 }
-.collections .container .col.izq {
+.main .collections .container .col.izq {
   box-shadow: 0px 9px 32px -1px rgba(0, 0, 0, 0.5);
   overflow: hidden;
 }
-.collections .container .col .title-collections {
+.main .collections .container .col .title-collections {
   padding: 3.125rem;
   padding-right: 0;
 }
-.collections .container .col .title-collections h2 {
-  color: white;
+.main .collections .container .col .title-collections h2 {
+  text-align: center;
+  color: #ebdfdf;
+  margin-bottom: 1rem;
 }
-.collections .container .col .title-collections p {
-  color: fade(white, 70%);
+.main .collections .container .col .title-collections p {
+  color: #ebdfdf;
   padding-bottom: 1.125rem;
   font-size: 1.125rem;
   line-height: 1.75;
 }
-.collections .container .col .title-collections p:last-child {
+.main .collections .container .col .title-collections p:last-child {
   padding-bottom: 0;
 }
-.collections .container .col .slider {
+.main .collections .container .col .slider {
   width: 300%;
   display: flex;
 }
-.collections .container .col .slider .slide {
+.main .collections .container .col .slider .slide {
   width: 100%;
   min-height: 400px;
   background-size: cover;
   background-position: center;
 }
-.collections .container .col .slider .slide.img1 {
-  background-image: url("../img/vestido-fashion.jpg");
+.main .collections .container .col .slider .slide.img1 {
+  background-image: url("../img/laptop7.jpg");
 }
-.collections .container .col .slider .slide.img2 {
-  background-image: url("../img/vestido-grey.jpg");
+.main .collections .container .col .slider .slide.img2 {
+  background-image: url("../img/laptop8.jpg");
 }
-.collections .container .col .slider .slide.img3 {
-  background-image: url("../img/vestido-beach.jpg");
+.main .collections .container .col .slider .slide.img3 {
+  background-image: url("../img/laptop10.png");
 }
-
-.contacto {
-  margin: 5rem 0;
+.main .contacto {
+  margin: 5rem 0 0 0;
 }
-.contacto .datos {
+.main .contacto .datos {
   padding: 5.625rem 0 11.875rem 0;
   position: relative;
-  background-image: url("../img/modas.png");
+  background-image: url("../img/laptop11.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
-.contacto .datos .overlay {
+.main .contacto .datos .overlay {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -371,7 +375,7 @@ p {
   top: 0;
   z-index: 1;
 }
-.contacto .datos .container {
+.main .contacto .datos .container {
   position: relative;
   z-index: 2;
   display: flex;
@@ -381,38 +385,39 @@ p {
   max-width: 1080px;
   margin: 0 auto;
 }
-.contacto .datos .container .blurb {
-  background-image: linear-gradient(to right bottom, #cd0101, #9d0813, #6d1017, #3e1214, #0f0707);
+.main .contacto .datos .container .blurb {
+  background-image: linear-gradient(to right bottom, #a49898, #938b8d, #827e80, #727173, #646464);
   padding: 2.25rem;
   text-align: center;
   width: 25%;
 }
-.contacto .datos .container .blurb h3 {
+.main .contacto .datos .container .blurb h3 {
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 2.6875rem;
   margin-bottom: 1.125rem;
+  color: #1a1818;
   border-bottom: 1px solid #f1eeee;
 }
-.contacto .datos .container .blurb p {
+.main .contacto .datos .container .blurb p {
   font-size: 1rem;
-  color: #b3b3b3;
+  color: #1a1818;
 }
-.contacto .formulario {
+.main .contacto .formulario {
   position: relative;
   z-index: 3;
-  background-image: linear-gradient(to right bottom, #cd0101, #9d0813, #6d1017, #3e1214, #0f0707);
+  background-image: linear-gradient(to right bottom, #a49898, #938b8d, #827e80, #727173, #646464);
   max-width: 40.625rem;
   margin: 0 auto;
   padding: 2.25rem;
   margin-top: -6.25rem;
   width: 90%;
 }
-.contacto .formulario .formulario_contacto .input-group {
+.main .contacto .formulario .formulario_contacto .input-group {
   position: relative;
   margin-bottom: 2rem;
 }
-.contacto .formulario .formulario_contacto .input-group input[type=text], .contacto .formulario .formulario_contacto .input-group input[type=email], .contacto .formulario .formulario_contacto .input-group textarea {
+.main .contacto .formulario .formulario_contacto .input-group input[type=text], .main .contacto .formulario .formulario_contacto .input-group input[type=email], .main .contacto .formulario .formulario_contacto .input-group textarea {
   font-size: 1rem;
   color: black;
   width: 100%;
@@ -420,75 +425,79 @@ p {
   padding: 0.9375rem 0;
   background: none;
   border: none;
-  border-bottom: 2px solid rgba(41, 4, 4, 0.5);
+  border-bottom: 2px solid rgba(53, 47, 47, 0.5);
   vertical-align: top;
 }
-.contacto .formulario .formulario_contacto .input-group input[type=text]:focus, .contacto .formulario .formulario_contacto .input-group input[type=email]:focus, .contacto .formulario .formulario_contacto .input-group textarea:focus {
-  border-bottom: 2px solid #290404;
+.main .contacto .formulario .formulario_contacto .input-group input[type=text]:focus, .main .contacto .formulario .formulario_contacto .input-group input[type=email]:focus, .main .contacto .formulario .formulario_contacto .input-group textarea:focus {
+  border-bottom: 2px solid #b3a9a9;
 }
-.contacto .formulario .formulario_contacto .input-group textarea {
+.main .contacto .formulario .formulario_contacto .input-group textarea {
   max-width: 100%;
   max-height: 10.25rem;
   min-height: 5.125rem;
   min-width: 100%;
 }
-.contacto .formulario .formulario_contacto .input-group label {
-  color: #c5c0c0;
+.main .contacto .formulario .formulario_contacto .input-group label {
+  color: #030303;
   font-family: "Lato", sans-serif;
 }
-.contacto .formulario .formulario_contacto .input-group label.label {
+.main .contacto .formulario .formulario_contacto .input-group label.label {
   position: absolute;
   top: 1rem;
   left: 0;
   font-size: 1rem;
+  font-weight: 700;
   line-height: 1rem;
   margin-left: 1rem;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.contacto .formulario .formulario_contacto .input-group label.label.active {
+.main .contacto .formulario .formulario_contacto .input-group label.label.active {
   top: -0.75rem;
   margin-left: 0;
   font-size: 0.75rem;
   line-height: 0.75rem;
-  color: white;
+  color: #2b2b2b;
 }
-.contacto .formulario .formulario_contacto .input-group .error {
+.main .contacto .formulario .formulario_contacto .input-group .error {
   position: absolute;
-  color: #ff3b3b;
+  color: #dd0202;
   font-family: "Lato", sans-serif;
   font-size: 0.875rem;
 }
-.contacto .formulario .formulario_contacto input[type=submit] {
-  background-image: linear-gradient(to right, #000000, #180308, #26050c, #32050d, #40000c);
+.main .contacto .formulario .formulario_contacto input[type=submit] {
+  background-image: linear-gradient(to right bottom, #000000, #181717, #292627, #3c3737, #4f4848);
   color: white;
   cursor: pointer;
   border: none;
+  border-top-right-radius: 10%;
+  border-bottom-left-radius: 10%;
   display: block;
   margin: 0 auto;
   margin-top: 3.125rem;
   padding: 0.9375rem;
-  width: 20%;
+  width: 6.25rem;
   outline: none;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
   font-family: "Lato", sans-serif;
-  font-weight: 400;
+  font-weight: 700;
 }
-.contacto .formulario .formulario_contacto input[type=submit]:hover {
-  background-image: linear-gradient(to right bottom, #cd0101, #9d0813, #6d1017, #3e1214, #0f0707);
+.main .contacto .formulario .formulario_contacto input[type=submit]:hover {
+  background-image: linear-gradient(to right bottom, #1a1818, #2c2828, #3f3939, #544b4b, #695d5d);
 }
 
 footer {
-  background-image: linear-gradient(to right top, #000000, #180308, #26050c, #32050d, #40000c);
+  background-image: linear-gradient(to right bottom, #000000, #080808, #0e0e0e, #141414, #181818);
   text-align: center;
   color: white;
   height: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 footer .container-footer p {
   font-style: normal;
@@ -501,10 +510,19 @@ footer .container-footer .top-redes {
 }
 
 @media all and (max-width: 1200px) {
-  .about-my-work .my-work {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .about-my-work .my-work img.img-1 {
+    height: 240px;
+    width: 280px;
+  }
+  .about-my-work .my-work img.img-3 {
+    height: 240px;
+    width: 280px;
+  }
+  .about-my-work .my-work .img-1 {
+    margin-right: 10rem;
+  }
+  .about-my-work .my-work .img-3 {
+    margin-left: 10rem;
   }
   .about-my-work .my-work .img-2 {
     display: none;
@@ -517,6 +535,52 @@ footer .container-footer .top-redes {
   }
   .about-my-work .about .others {
     width: 100%;
+  }
+
+  .main .collections .container .col {
+    width: 100%;
+  }
+
+  .main .collections .container .col .title-collections {
+    padding: 0;
+  }
+
+  .collections .container {
+    display: block;
+    width: 540px;
+  }
+  .collections .container .col.izq {
+    width: 100%;
+  }
+  .collections .container .col {
+    width: 100%;
+  }
+  .collections .container .col .title-collections {
+    padding: 1rem;
+    text-align: justify;
+  }
+  .collections .container .col .title-collections h2 {
+    text-align: center;
+  }
+}
+@media all and (max-width: 1000px) {
+  .about-my-work .my-work {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .about-my-work .my-work img.img-2 {
+    display: block;
+    margin-right: 0;
+    width: 260px;
+    height: 200px;
+  }
+  .about-my-work .my-work img.img-1 {
+    width: 260px;
+    height: 200px;
+  }
+  .about-my-work .my-work .img-3 {
+    display: none;
   }
 
   .collections .container {
@@ -535,40 +599,69 @@ footer .container-footer .top-redes {
   }
 }
 @media all and (max-width: 980px) {
-  .contacto .datos .container .blurb {
+  .main .contacto .datos .container .blurb {
     width: 100%;
     max-width: 40.625rem;
+    max-height: 10.75rem;
     margin: 0 auto;
     margin-bottom: 2.25rem;
   }
-  .contacto .datos .container .blurb:last-child {
+  .main .contacto .datos .container .blurb:last-child {
     margin-bottom: 0;
   }
 }
 @media all and (max-width: 850px) {
-  .my-work .img-1 {
+  .my-image {
+    display: none;
+  }
+
+  .my-work .img-3 {
     display: none;
   }
 }
 @media all and (max-width: 800px) {
-  .home .card {
+  .home {
+    max-height: 800px;
+  }
+
+  .main .home .card {
+    text-align: center;
     display: block;
   }
-  .home .card .card-description {
+  .main .home .card .card-description {
     width: 100%;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
   }
-  .home .card .my-image {
+  .main .home .card .card-description .web {
+    display: none;
+  }
+  .main .home .card .my-image {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 1rem;
   }
-  .home .card .my-image img {
-    width: 30%;
+  .main .home .card .my-image img {
+    width: 40%;
+    height: 40%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .main .home .card .movil {
+    display: inline-block;
+    background-image: linear-gradient(to left top, #e00000, #c70011, #ad0018, #92021b, #78091c);
+    border: none;
+    height: 2.5rem;
+    width: 10.25rem;
+    color: white;
+    font-size: 24px;
+    border-radius: 1.25rem;
+    cursor: pointer;
+  }
+  .main .home .card .movil:hover {
+    background-image: linear-gradient(to right bottom, #5e2a32, #7a2733, #962031, #b1152b, #cb0021);
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+@media all and (max-width: 750px) {
+  .about-my-work .my-work img.img-1 {
+    display: none;
   }
 }
 @media all and (max-width: 660px) {
@@ -581,6 +674,36 @@ footer .container-footer .top-redes {
   }
 
   .col.izq {
+    display: none;
+  }
+}
+@media all and (max-width: 620px) {
+  .main .collections .container {
+    width: 50%;
+  }
+}
+@media all and (max-width: 520px) {
+  .main .collections .container {
+    width: 50%;
+  }
+}
+@media all and (max-width: 300px) {
+  .header-movil .name {
+    display: none;
+  }
+}
+@media all and (max-width: 310px) {
+  .about-my-work .my-work img.img-2 {
+    display: none;
+  }
+}
+@media all and (max-width: 264px) {
+  .main .home .card .movil {
+    display: none;
+  }
+}
+@media all and (max-width: 216px) {
+  .main .home .card .card-description h3 {
     display: none;
   }
 }
